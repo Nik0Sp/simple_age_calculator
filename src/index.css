@@ -17,13 +17,26 @@ body {
   align-items: center;
   flex-direction: column;
   height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+.section::after{
+  content: "";
+  background-color:#5c6bc0;
+  width: 200%;
+  height: 100vh;
+  position: absolute;
+  transform: rotate(45deg);
+  z-index: 1;
 }
 
 .title {
   margin-bottom: 1rem;
+  z-index: 2;
 }
 
 .container {
+  z-index: 2;
   text-align: center;
 }
 
@@ -31,6 +44,7 @@ body {
   margin: .3rem;
   width: 100px;
   overflow: hidden;
+  
 }
 
 .container div label {
@@ -60,10 +74,12 @@ body {
   color: red;
   font-size: 1.2rem;
   text-transform: uppercase;
+  z-index: 2;
 }
 
 .result-container {
   margin-top: 1rem;
+  z-index: 2;
 }
 
 .result-container span {
